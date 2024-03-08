@@ -6,4 +6,5 @@ public interface Mobil {
     int setDistance(int distance);
     int getSpeed();
     int setSpeed(int speed);
+
 }

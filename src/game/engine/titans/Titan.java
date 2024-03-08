@@ -10,8 +10,13 @@ public abstract class Titan implements Comparable <Titan> {
 
     protected int distanceFromBase;
 
-    public Titan(int distanceFromBase) {
+    public Titan(int distanceFromBase, int baseHealth, int baseDamage, int heightInMeters, int resourcesValue, int dangerLevel) {
         this.distanceFromBase = distanceFromBase;
+        this.baseHealth = baseHealth;
+        this.baseDamage = baseDamage;
+        this.heightInMeters = heightInMeters;
+        this.resourcesValue = resourcesValue;
+        this.dangerLevel = dangerLevel;
     }
 
     public abstract void move();
@@ -24,7 +29,7 @@ public abstract class Titan implements Comparable <Titan> {
         return distanceFromBase;
     }
 
-    @Override
+
     public int compareTo(Titan titan) {
         return Integer.compare(this.distanceFromBase, titan.distanceFromBase);
     }
@@ -80,8 +85,13 @@ public abstract class Titan implements Comparable <Titan> {
     final int dangerLevel;
 
     Titan(int baseHealth, int baseDamage, int heightInMeters,
-          int distanceFromBase, int speed, int resourcesValue, int dangerLevel){
+          int distanceFromBase, int speed, int resourcesValue, int dangerLevel, int baseHealth1, int baseDamage1, int heightInMeters1, int resourcesValue1, int dangerLevel1){
         currentHealth = baseHealth;
+        this.baseHealth = baseHealth1;
+        this.baseDamage = baseDamage1;
+        this.heightInMeters = heightInMeters1;
+        this.resourcesValue = resourcesValue1;
+        this.dangerLevel = dangerLevel1;
     }
 
     @Override
