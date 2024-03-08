@@ -1,4 +1,5 @@
-package game.engine.interfaces;public interface Mobil {
+package game.engine.interfaces;
+public interface Mobil {
 
     int getDistance();
     int setDistance(int distance);
