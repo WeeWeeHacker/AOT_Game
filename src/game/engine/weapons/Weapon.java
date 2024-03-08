@@ -12,5 +12,8 @@ public abstract class Weapon {
         this.baseDamage = baseDamage;
     }
 
-
+    final int PiercingCannon = 1;
+    final int SniperCannon = 2;
+    final int VolleySpreadCannon = 3;
+    final int WallTrap = 4;
 }

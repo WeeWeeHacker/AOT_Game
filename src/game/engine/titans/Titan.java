@@ -4,6 +4,14 @@ import java.util.*;
 
 public abstract class Titan implements Comparable <Titan> {
 
+    public Titan(int baseHealth, int baseDamage, int heightInMeters, int distanceFromBase, int speed, int resourcesValue, int dangerLevel, int baseHealth1, int baseDamage1, int heightInMeters1, int resourcesValue1, int dangerLevel1) {
+        this.baseHealth = baseHealth1;
+        this.baseDamage = baseDamage1;
+        this.heightInMeters = heightInMeters1;
+        this.resourcesValue = resourcesValue1;
+        this.dangerLevel = dangerLevel1;
+    }
+
     public void setDistanceFromBase(int distanceFromBase) {
         this.distanceFromBase = distanceFromBase;
     }
@@ -84,19 +92,9 @@ public abstract class Titan implements Comparable <Titan> {
 
     final int dangerLevel;
 
-    Titan(int baseHealth, int baseDamage, int heightInMeters,
-          int distanceFromBase, int speed, int resourcesValue, int dangerLevel, int baseHealth1, int baseDamage1, int heightInMeters1, int resourcesValue1, int dangerLevel1){
-        currentHealth = baseHealth;
-        this.baseHealth = baseHealth1;
-        this.baseDamage = baseDamage1;
-        this.heightInMeters = heightInMeters1;
-        this.resourcesValue = resourcesValue1;
-        this.dangerLevel = dangerLevel1;
-    }
-
-    @Override
-    public int compareTo(Titan o){
-        return o.distanceFromBase;
-    }
+    final int PureTitan = 1;
+    final int AbnormalTitan = 2;
+    final int ArmoredTitan = 3;
+    final int ColossalTitan = 4;
 
 }
