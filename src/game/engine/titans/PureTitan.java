@@ -23,5 +23,8 @@ public class PureTitan extends Titan{
     }
 
 
+    public static void main(String[] args) {
+        System.out.println("Hello, Pure Titan!");
+    }
 
 }
